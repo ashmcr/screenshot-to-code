@@ -29,7 +29,7 @@ export function generateCode(
   const wsUrl = `${WS_BACKEND_URL}/generate-code`;
   console.log("Connecting to backend @ ", wsUrl);
 
-  const ws = new WebSocket(wsUrl);
+  const ws = new WebSocket('ws://127.0.0.1:7001/generate-code');
   wsRef.current = ws;
 
   ws.addEventListener("open", () => {
